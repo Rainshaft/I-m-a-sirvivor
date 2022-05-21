@@ -2326,22 +2326,24 @@ let commands = {
 			let points = dd.getPoints(sorted[i]);
 			let bgcolor = dd.getBgColor(sorted[i]);
 			let textcolor = dd.getTextColor(sorted[i]);
-			let displaypoints = dd.getDisplayPoints(sorted[i]);
+			/*let displaypoints = dd.getDisplayPoints(sorted[i]);*/
 			if (points === 0) continue;
 			let h = hostcount.count[toId(cur)] ? hostcount.count[toId(cur)] : 0;
 			let n = gamecount.count[toId(cur)];
 			let e = eventcount.count[toId(cur)] ? eventcount.count[toId(cur)] : 0;
 			if (!n) n = "Error";
 
-			points = Math.floor((50 * (points/n) * ((1.1*n*n)/(n*n+80) + (n/225)) + ((h*h+100)/50)));
+			/*points = Math.floor((50 * (points/n) * ((1.1*n*n)/(n*n+80) + (n/225)) + ((h*h+100)/50)));
 			
 			if (displaypoints >= points) {
 				points = displaypoints;	
 			} else {
 				dd.updateDisplayPoints(cur, points);
 			}
-			
 			points += e;
+			
+			*/
+			
 			res.push([
 				cur,
 				points,
